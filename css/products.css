@@ -1,0 +1,105 @@
+body {
+    background-image: url(../images/rain.png);
+    background-position: center;
+    background-size: cover;
+    background-color: lavender;
+
+}
+
+.sticky-container {
+    top:0;
+    position: sticky
+}
+
+aside {
+    display:flex;
+    width: 20rem;
+    position: absolute;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 15.3rem;
+    width: 100%;
+}
+
+.cart-items {
+    background-color: lightblue;
+    text-align: center;
+    width: 100%;
+    max-height: 500px;
+    overflow: scroll;
+    border: solid 2px black;
+    font-size: 1.3rem;
+}
+
+/* .items > p:hover {
+    color: red;
+    text-decoration: line-through;
+    cursor: pointer;
+} */
+
+aside button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 2rem;
+}
+
+#title {
+    text-align: center;
+}
+
+main {
+    max-width: none;
+    margin: initial;
+}
+
+article {
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: lavender;
+    text-shadow: 2px 2px black;
+}
+
+.product {
+    margin: 10px 5px;
+}
+
+section div {
+    background-color: lavender;
+    box-shadow: 2px 2px #1167b1;
+    width: 300px;
+    cursor: pointer;
+}
+
+section div:active {
+    background-image: none;
+    background-color: lightgreen;
+}
+
+div figure img {
+    width: 15rem;
+    height: 15rem;
+}
+
+p {
+    margin: auto 5px;
+}
+
+@media (max-width: 800px) {
+    .product{
+        margin: 10px 0;
+    }
+}

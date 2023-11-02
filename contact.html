@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="light-blue darken-4">
+        <figure class="logo"><img src="images/riptide.png" alt="riptide"></figure>
+        <nav class="light-blue darken-4">
+            <ul>
+                <li class="light-blue"><a href="index.html">Home</a></li>
+                <li class="light-blue"><a href="products.html">Products</a></li>
+                <li class="light-blue"><a href='contact.html'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="contact-response.html">
+            <h1>HELP US IMPROVE</h1>
+            <fieldset>
+                <legend>Survey</legend>
+                <figure><img src="images/arowana.avif"></figure>
+                <p>* indicates required</p>
+
+                <div class="form-group">
+                    <div>
+                        <label for="first-name">*First Name:</label>
+                        <input type="text" id="first-name" name='first-name' required>
+                    </div>
+                    <div>
+                        <label for="last-name">*Last Name:</label>
+                        <input type="text" id="last-name" name='last-name'required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name='email'required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" placeholder="(000) 000-0000" pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label for="favorite">Which fish was your favorite?</label>
+                        <select id="favorite">
+                            <option value="">--Select a Fish--</option>
+                            <option>Betta Fish</option>
+                            <option>Goldfish</option>
+                            <option>Tetra</option>
+                            <option>Guppy</option>
+                            <option>Clownfish</option>
+                            <option>Bluetang</option>
+                            <option>Mandarin Fish</option>
+                            <option>Angelfish</option>
+                            <option>Mantis Shrimp</option>
+                            <option>Arowana</option>
+                            <option>Discus Fish</option>
+                            <option>Puffer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="slider">Rate your experience:</label>
+                        <div id="slider-container"><p>Bad</p><input type="range" id="slider"><p>Good</p></div>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="cancel">Reset</button>
+        </form>
+        <details>
+            <summary>Comments</summary>
+            <div id="comment-submission-container">
+                <label for="insert-comment">Leave a comment</label>
+                <textarea id="insert-comment"></textarea>
+                <button id="submit-comment" type="submit">Submit</button>
+            </div>
+            <section id="comment-section">
+                <div class="comment">
+                    <p class="name">Anon</p>
+                    <p class="time">1 day ago</p>
+                    <p class="comment-content">Good service, the fish I got were pretty.</p>
+                </div>
+            </section>
+        </details>
+    </main>
+    <footer class="center light-blue white-text">
+        <ul class="left">
+            <li>Social Media</li>
+            <hr></hr>
+            </div>
+                <a><img src="images/youtube.png"></a>
+                <a><img src="images/linkedin.png"></a>
+                <a><img src="images/twitter.png"></a>
+            </div>
+        </ul>
+        <ul class="left">
+            <li>Contact Information</li>
+            <hr></hr>
+            <li>business@riptide.com</li>
+            <li>780-300-2790</li>
+            <li>7200 Riptide Ln, Charlotte NC 28215</li>
+        </ul>
+        <ul class="left">
+            <li>Learn More</li>
+            <hr></hr>
+            <li>About Us</li>
+            <li>Set-up Tutorial</li>
+            <li>Terms of Service</li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

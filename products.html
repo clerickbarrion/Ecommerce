@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header class="light-blue darken-4">
+        <figure class="logo"><img src="images/riptide.png" alt="riptide"></figure>
+        <nav>
+            <ul>
+                <li class="light-blue"><a href="index.html">Home</a></li>
+                <li class="light-blue"><a href="products.html">Products</a></li>
+                <li class="light-blue"><a href='contact.html'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sticky-container">
+            <aside>
+                <div class="cart">
+                    <div class="cart-items">
+                    <p>Your Items:</p>
+                    <div class="items">
+                        
+                    </div>
+                    <hr></hr>
+                    <p id="total">Total: $0.00</p>
+                    <button id="check-out">Check Out</button>
+                    </div>
+                    <button onclick="openCart()">Cart</button>
+                </div>
+            </aside>
+        </div>
+        <h1 id="title">FIND YOUR NEW FRIEND</h1>
+        <article>
+            <h1>Freshwater Fish</h1>
+            <section>
+                <div class="product" data-name="Betta Fish" data-price="12.99">
+                    <figure>
+                        <img src="images/betta.avif">
+                        <figcaption>Betta Fish</figcaption>
+                    </figure>
+                    <p>$12.99</p>
+                    <p>-Vibrant and elegant, with stunning colors and flowing fins</p>
+                </div>
+                <div class="product" data-name="Gold Fish" data-price="6.99">
+                    <figure>
+                        <img src="images/goldfish.avif">
+                        <figcaption>Gold Fish</figcaption>
+                    </figure>
+                    <p>$6.99</p>
+                    <p>-Classic and shimmering, with graceful swimming</p>
+                </div>
+                <div class="product" data-name="Tetra" data-price="3.99">
+                    <figure>
+                        <img src="images/tetra.png">
+                        <figcaption>Tetra</figcaption>
+                    </figure>
+                    <p>$3.99</p>
+                    <p>-Lively and social, with radiant colors</p>
+                </div>
+                <div class="product" data-name="Guppy" data-price="12.99">
+                    <figure>
+                        <img src="images/guppy.jpeg">
+                        <figcaption>Guppy</figcaption>
+                    </figure>
+                    <p>$12.99</p>
+                    <p>-Active and social, with captivating patterns</p>
+                </div>
+            </section>
+        </article>
+        <hr></hr>
+        <article>
+            <h1>Saltwater Fish</h1>
+            <section>
+                <div class="product" data-name="Clown Fish" data-price="12.99">
+                    <figure>
+                        <img src="images/clownfish.webp">
+                        <figcaption>Clown Fish</figcaption>
+                    </figure>
+                    <p>$12.99</p>
+                    <p>-Cheerful and playful, with iconic orange and white strips</p>
+                </div>
+                <div class="product" data-name="Blue Tang" data-price="19.99">
+                    <figure>
+                        <img src="images/bluetang.webp">
+                        <figcaption>Blue Tang</figcaption>
+                    </figure>
+                    <p>$19.99</p>
+                    <p>-Striking electric blue colors, a citizen of the reef</p>
+                </div>
+                <div class="product" data-name="Mandarin Fish" data-price="22.99">
+                    <figure>
+                        <img src="images/mandarinfish.jpeg">
+                        <figcaption>Mandarin Fish</figcaption>
+                    </figure>
+                    <p>$22.99</p>
+                    <p>-Slow-moving and powerful, predator of the reef</p>
+                </div>
+                <div class="product" data-name="Angel Fish" data-price="24.99">
+                    <figure>
+                        <img src="images/angelfish.avif">
+                        <figcaption>Angel Fish</figcaption>
+                    </figure>
+                    <p>$24.99</p>
+                    <p>-Majestic and enduring, an angel of the sea</p>
+                </div>
+            </section>
+        </article>
+        <hr></hr>
+        <article>
+            <h1>Exotic Fish</h1>
+            <section>
+                <div class="product" data-name="Mantis Shrimp" data-price="34.99">
+                    <figure>
+                        <img src="images/mantisshrimp.webp">
+                        <figcaption>Mantis Shrimp</figcaption>
+                    </figure>
+                    <p>$34.99</p>
+                    <p>-All-seeing and lightning-fast, the power of the sun in each punch</p>
+                </div>
+                <div class="product" data-name="Arowana" data-price="59.99">
+                    <figure>
+                        <img src="images/arowana.avif">
+                        <figcaption>Arowana</figcaption>
+                    </figure>
+                    <p>$59.99</p>
+                    <p>-Sleek and long, a symbol of luck and prosperity</p>
+                </div>
+                <div class="product" data-name="Discus Fish" data-price="44.99">
+                    <figure>
+                        <img src="images/discusfish.jpeg">
+                        <figcaption>Discus Fish</figcaption>
+                    </figure>
+                    <p>$44.99</p>
+                    <p>-Circular and radiant, like the sun</p>
+                </div>
+                <div class="product" data-name="Puffer" data-price="27.99">
+                    <figure>
+                        <img src="images/puffer.jpeg">
+                        <figcaption>Puffer</figcaption>
+                    </figure>
+                    <p>$27.99</p>
+                    <p>-Round and inflatable, with potent venom</p>
+                </div>
+            </section>
+            <hr></hr>
+        </article>
+    </main>
+    <footer class="center light-blue white-text">
+        <ul class="left">
+            <li>Social Media</li>
+            <hr></hr>
+            </div>
+                <a><img src="images/youtube.png"></a>
+                <a><img src="images/linkedin.png"></a>
+                <a><img src="images/twitter.png"></a>
+            </div>
+        </ul>
+        <ul class="left">
+            <li>Contact Information</li>
+            <hr></hr>
+            <li>business@riptide.com</li>
+            <li>780-300-2790</li>
+            <li>7200 Riptide Ln, Charlotte NC 28215</li>
+        </ul>
+        <ul class="left">
+            <li>Learn More</li>
+            <hr></hr>
+            <li>About Us</li>
+            <li>Set-up Tutorial</li>
+            <li>Terms of Service</li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
