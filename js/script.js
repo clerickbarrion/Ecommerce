@@ -1,6 +1,8 @@
 //home
 var slideIndex = 0;
 
+// Iterates through carousel items and sets display to block or none 
+// depending on current index
 function carousel() {
   var i;
   var carouselItem = document.getElementsByClassName("carousel-item");
@@ -22,17 +24,21 @@ checkOut = document.getElementById('check-out')
 var total = 0
 var id = 0
 
+// Opens the cart
 function openCart() {
     cart.style.right === '15.3rem' ? cart.style.right = '0rem' : cart.style.right = '15.3rem'
 }
 
+// Deletes cart item
 function deleteSelf(id, price) {
     self = document.getElementById(id)
     self.remove()
+    // Updates price
     total -= price
     totalPrice.textContent = `Total: $${Math.round(total * 100) / 100}`
 }
 
+// Fish object maker
 class Fish {
     constructor(name, price) {
         this.name = name
@@ -40,25 +46,31 @@ class Fish {
     }
 }
 
+// Event listener to add products to cart
 Array.from(products).forEach(product => {
     product.addEventListener('click', () => {
         let fish = new Fish(product.dataset.name, product.dataset.price)
+        //Creates a p tag and adds name and price to it
         item = document.createElement('p')
-        item.innerText = `${fish.name}: $${fish.price}`
+        item.innerText = `${fish.name}: $${fish.price} `
         total += Number(fish.price)
+        // Gives it a unique id so it can find itself and self-destruct
         item.setAttribute('id', String(id))
         item.setAttribute('onclick', `deleteSelf(${id},${fish.price})`)
         id++
+        // Appends p tag to cart
         cartItems.appendChild(item)
+        // Updates price
         totalPrice.textContent = `Total: $${Math.round(total * 100) / 100}`
     })
 })
 
+// Empties cart and alerts purchase
 if (window.location.href.includes('product')){
 checkOut.addEventListener('click', () => {
+    window.location.href = `contact-response.html?${cartItems.textContent.trim()}`
     cartItems.innerHTML = ''
     totalPrice.textContent = `Total: $0.00`, total = 0
-    alert('Thanks for your purchase')
 })
 }
 
@@ -70,6 +82,8 @@ commentSection = document.getElementById('comment-section')
 
 if (window.location.href.includes('contact.html')) {
 commentButton.addEventListener('click', () => {
+    // Creates a div that contains p tags containing name, time,
+    // and comment
     content = commentContent.value
     commentContainer = document.createElement('div')
     commentContainer.classList.add('comment')
@@ -80,20 +94,25 @@ commentButton.addEventListener('click', () => {
     comment = document.createElement('p')
     comment.classList.add('comment-content')
     
+    // Appends p tags to div tag
     commentContainer.appendChild(Name)
     commentContainer.appendChild(time)
     commentContainer.appendChild(comment)
 
+    // Changes p tag content
     Name.innerText = 'Anon'
     time.innerText = 'Just now'
     comment.innerText = content
 
+    // Adds div tag to comment section
     commentSection.appendChild(commentContainer)
 
 })
 }
 
-if (window.location.href.includes('response')) {
+// Finds first name and last name from the url and adds
+// it to the response page
+if (window.location.href.includes('response.html?fi')) {
     response = document.getElementById('response')
     form = window.location.href
     let firstName = ''
@@ -114,5 +133,18 @@ if (window.location.href.includes('response')) {
     }
 
     response.innerText = `Thank you for shopping with RipTide, ${firstName} ${lastName}.`
-
+} 
+// lists what they purchased.
+else if (window.location.href.includes('%20')) {
+    response = document.getElementById('response')
+    url = window.location.href.replaceAll('%20', ' ')
+    start = url.indexOf('?')
+    start++
+    let receipt = ''
+    console.log(start, url[start])
+    for (start; start<url.length; start++) {
+        receipt += url[start]
+    } 
+    receipt = receipt.replaceAll('99 ', '99\n')
+    response.innerText = `Thank you for shopping with RipTide. \n What you bought: \n\n ${receipt}`
 }

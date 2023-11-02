@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/rain.png);
+    background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-size: cover;
     background-color: lavender;
@@ -79,7 +79,7 @@ h1 {
 
 section div {
     background-color: lavender;
-    box-shadow: 2px 2px #1167b1;
+    box-shadow: 5px 5px #1167b1;
     width: 300px;
     cursor: pointer;
 }
