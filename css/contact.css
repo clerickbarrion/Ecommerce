@@ -77,7 +77,7 @@ input:focus:invalid {
 	background-color: rgb(255, 232, 233);
 }
 
-button[type='submit'], button[type='cancel'] {
+button[type='submit'], button[type='reset'] {
     width: fit-content;
     margin: auto;
     font-size: 1.3rem;

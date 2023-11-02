@@ -1,6 +1,7 @@
 html,body {
     height: 100%;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -52,7 +53,7 @@ nav ul li {
     justify-content: center;
     width: 33.33%;
     height: 100%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     flex-wrap: wrap;
 }
 

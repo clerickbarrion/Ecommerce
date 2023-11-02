@@ -35,11 +35,11 @@ aside {
     font-size: 1.3rem;
 }
 
-/* .items > p:hover {
+.items > p:hover {
     color: red;
     text-decoration: line-through;
     cursor: pointer;
-} */
+}
 
 aside button {
     width: fit-content;
@@ -92,6 +92,10 @@ section div:active {
 div figure img {
     width: 15rem;
     height: 15rem;
+}
+
+figure p:nth-child(1) {
+    font-size: 2rem;
 }
 
 p {

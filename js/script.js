@@ -3,13 +3,13 @@ var slideIndex = 0;
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("carousel-item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var carouselItem = document.getElementsByClassName("carousel-item");
+  for (i = 0; i < carouselItem.length; i++) {
+    carouselItem[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
+  if (slideIndex > carouselItem.length) {slideIndex = 1}
+  carouselItem[slideIndex-1].style.display = "block";
   setTimeout(carousel, 2000)
 }
 //products
@@ -26,6 +26,13 @@ function openCart() {
     cart.style.right === '15.3rem' ? cart.style.right = '0rem' : cart.style.right = '15.3rem'
 }
 
+function deleteSelf(id, price) {
+    self = document.getElementById(id)
+    self.remove()
+    total -= price
+    totalPrice.textContent = `Total: $${Math.round(total * 100) / 100}`
+}
+
 class Fish {
     constructor(name, price) {
         this.name = name
@@ -39,6 +46,9 @@ Array.from(products).forEach(product => {
         item = document.createElement('p')
         item.innerText = `${fish.name}: $${fish.price}`
         total += Number(fish.price)
+        item.setAttribute('id', String(id))
+        item.setAttribute('onclick', `deleteSelf(${id},${fish.price})`)
+        id++
         cartItems.appendChild(item)
         totalPrice.textContent = `Total: $${Math.round(total * 100) / 100}`
     })
@@ -51,6 +61,7 @@ checkOut.addEventListener('click', () => {
     alert('Thanks for your purchase')
 })
 }
+
 // Contact
 
 commentButton = document.getElementById('submit-comment');
